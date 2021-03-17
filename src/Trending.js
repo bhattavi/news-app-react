@@ -29,9 +29,11 @@ function Trending() {
     },[])
 
     const increment = () =>{
+        if(index < trending.length){
         let currIndex = index;
         currIndex++;
         setIndex(currIndex);
+        }
     }
     const decrement = () =>{
         if(index > 0){
@@ -44,6 +46,7 @@ function Trending() {
         display: "flex",
         justifyContent: "space-around"
     }
+   
   return (
      
    <div>
