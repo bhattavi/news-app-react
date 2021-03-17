@@ -48,6 +48,7 @@ function Trending() {
    <div>
         {console.log(index)}
      <Navbar></Navbar>
+     <h1>Trending</h1>
      {trending.length > 1 &&(<Card decrement={decrement} increment={increment} news ={trending} index = {index}></Card>)}
    </div>
   );

@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Card from './Card'
+import Navbar from './Navbar'
 const API_KEY = process.env.REACT_APP_YOUR_API_KEY_NAME;
 
 export default function Categories() {
@@ -50,11 +51,12 @@ export default function Categories() {
 
     return (
         <div>
-            <h1>this is categories</h1>
+            <Navbar></Navbar>
+            <h1>Categories</h1>
             <button onClick={handleTechnology}>Technology</button>
             <button onClick={handleBusines}>Business</button>
             <button onClick={handleGenral}>Genral</button>
-            <Link to = "/"><button>Back</button></Link>
+            
 
             {result.length > 1 &&(<Card decrement={decrement} increment={increment} news ={result} index = {index}></Card>)}
         </div>

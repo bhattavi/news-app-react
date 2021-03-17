@@ -2,6 +2,7 @@ import React, {useState, useEffect, useRef} from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Card from './Card'
+import Navbar from './Navbar'
 const API_KEY = process.env.REACT_APP_YOUR_API_KEY_NAME;
 
 export default function Search() {
@@ -44,9 +45,10 @@ export default function Search() {
     return (
        
         <div>
+            <Navbar></Navbar>
              {console.log(search)}
-            <h1>This is search</h1>
-            <Link to = "/"><button>Back</button></Link>
+            <h1>Search</h1>
+           
             <form>
             <input type="text" ref={inputRef} placeholder="Search"></input>
             <button onClick={handleSubmit}>Submit</button>
