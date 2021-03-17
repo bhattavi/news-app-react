@@ -42,22 +42,13 @@ function Trending() {
         setIndex(currIndex);
         }else setIndex(0);
     }
-    const btnStyle = {
-        display: "flex",
-        justifyContent: "space-around"
-    }
    
   return (
      
    <div>
         {console.log(index)}
      <Navbar></Navbar>
-     {trending.length > 1 &&(<Card news ={trending} index = {index}></Card>)}
-    
-     <div style = {btnStyle}>
-        <button onClick={decrement}>Back</button>
-        <button onClick={increment}>Next</button>
-        </div>
+     {trending.length > 1 &&(<Card decrement={decrement} increment={increment} news ={trending} index = {index}></Card>)}
    </div>
   );
 }

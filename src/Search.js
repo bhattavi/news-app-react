@@ -38,12 +38,7 @@ export default function Search() {
         currIndex--;
         setIndex(currIndex);
         }else setIndex(0);
-    }
-    const btnStyle = {
-        display: "flex",
-        justifyContent: "space-around"
-    }
-   
+    }   
 
     const inputRef = useRef();
     return (
@@ -57,13 +52,7 @@ export default function Search() {
             <button onClick={handleSubmit}>Submit</button>
             </form>
 
-            {result.length > 1 &&(<Card news ={result} index = {index}></Card>)}
-    
-    <div style = {btnStyle}>
-       <button onClick={decrement}>Back</button>
-       <button onClick={increment}>Next</button>
-       </div>
-            
+            {result.length > 1 &&(<Card decrement={decrement} increment={increment} news ={result} index = {index}></Card>)}            
         </div>
     )
 }
