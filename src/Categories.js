@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import axios from 'axios'
 import Card from './Card'
 import Navbar from './Navbar'
-const API_KEY = process.env.REACT_APP_YOUR_API_KEY_NAME;
+const API_KEY = "0c4da8ad632340a29d27e3002cc740c1";
 
 export default function Categories() {
     //https://newsapi.org/v2/sources?category=businessapiKey=API_KEY
